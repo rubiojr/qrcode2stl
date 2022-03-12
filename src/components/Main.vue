@@ -101,7 +101,6 @@
           <a class="title is-4" href="#printguide"><i class="fa fa-angle-double-down"></i> {{$t('scrollDownForGuide')}}</a>
         </p>
         <div v-html="modelAd" class="mt-4 has-text-centered"></div>
-        <Promotions />
       </div>
     </div>
 
@@ -130,8 +129,6 @@ import QRCodeMenu from './QRCodeMenu.vue';
 import SpotifyMenu from './SpotifyMenu.vue';
 import TextMenu from './TextMenu.vue';
 import PrintGuide from './PrintGuide.vue';
-import Promotions from './Promotions.vue';
-import { getRandomBanner } from '../utils';
 
 const shareHashMarker = '#share';
 
@@ -148,7 +145,6 @@ export default {
     ChangelogModal,
     ExportModal,
     VueMarkdown,
-    Promotions,
   },
   data() {
     return {
@@ -181,12 +177,6 @@ export default {
   },
   mounted() {
     // eslint-disable-next-line camelcase
-    if (typeof __google_ad_urls === 'undefined') {
-      this.adblockEnabled = true;
-      this.modelAd = getRandomBanner('728x90');
-    } else {
-      this.modelAd = document.getElementById('adsenseloader-model').innerHTML;
-    }
     this.initScene();
     this.startAnimation();
     this.exporter = new STLExporter();

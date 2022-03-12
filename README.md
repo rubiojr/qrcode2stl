@@ -1,5 +1,9 @@
 # qrcode2stl
 
+This is a tracker/ads free version of https://github.com/flxn/qrcode2stl
+
+# Original README
+
 Create QR codes and download them as \*.stl file for 3d printing.
 
 ![The Web App](https://flxn.de/images/qrcode2stl_screenshot.png)

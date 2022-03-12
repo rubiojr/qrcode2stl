@@ -1,10 +1,6 @@
 <template>
   <section id="printguide" class="section">
     <div class="columns">
-      <div class="column is-2">
-        <div v-html="banner1" style="margin-top: 120px"></div>
-        <div v-html="banner2" style="margin-top: 600px"></div>
-      </div>
       <div class="column is-8">
 
         <h1 class="title is-1">
@@ -79,25 +75,6 @@
     </div>
   </section>
 </template>
-
-<script>
-import { getRandomBanner } from '../utils';
-
-export default {
-  data() {
-    return {
-      banner1: '',
-      banner2: '',
-      banner3: '',
-    };
-  },
-  mounted() {
-    this.banner1 = getRandomBanner('300x600');
-    this.banner2 = getRandomBanner('300x600');
-    this.banner3 = getRandomBanner('300x600');
-  },
-};
-</script>
 
 <style scoped>
   .title {

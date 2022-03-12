@@ -116,9 +116,6 @@ export default {
       this.newVersion = false;
     },
   },
-  mounted() {
-    this.headerAd = document.getElementById('adsenseloader-header').innerHTML;
-  },
   created() {
     const lastViewedVersion = window.localStorage.getItem('lastViewedVersion') || '';
     if (lastViewedVersion !== this.appVersion) {

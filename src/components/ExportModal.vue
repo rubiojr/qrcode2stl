@@ -55,7 +55,6 @@
 
 <script>
 import { bus } from '../main';
-import { getRandomBanner } from '../utils';
 
 export default {
   name: 'ExportModal',
@@ -71,12 +70,6 @@ export default {
   },
   mounted() {
     // eslint-disable-next-line camelcase
-    if (typeof __google_ad_urls === 'undefined') {
-      // this.adblockEnabled = true;
-      this.exportAd = getRandomBanner('300x250');
-    } else {
-      this.exportAd = document.getElementById('adsenseloader-export').innerHTML;
-    }
     setInterval(() => {
       if (this.seconds > 0) {
         this.seconds -= 1;
